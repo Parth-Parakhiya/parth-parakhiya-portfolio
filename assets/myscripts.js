@@ -14794,6 +14794,13 @@ const b = {
             description: "Led backend development of an event and logistics system, refactored legacy software using .NET and C#, implemented microservices architecture, and coordinated Agile sprints with a 12-member team. Oversaw CI/CD pipelines and Docker-based deployments via Azure DevOps.",
             skills: ["C#", ".NET", "SQL", "Docker", "Azure DevOps", "Scrum"]
           }, {
+            title: "Research Lead / Developer",
+            company: "Universal College of Engineering",
+            location: "Mumbai, India",
+            dateRange: "Aug 2022 – Apr 2023",
+            description: "Led the research and development of an Android-based fitness application integrating biometric sensors and music playback logic. Published findings in IJRASET Journal and managed a 4-member team to enhance user engagement through real-time feedback loops.",
+            skills: ["Android", "Java", "Biometric Sensors", "Agile", "Research Publication", "UI/UX"]
+          }, {
             title: "Associate Web Developer Intern",
             company: "NeoDocto Inc.",
             location: "Remote (Headquartered in NYC, USA)",
@@ -14828,46 +14835,54 @@ const b = {
       }],
     projects: [
         {
-          title: "CrediWise – AI-Based Loan Eligibility System",
-          description: "AI-powered web platform developed for TD Bank to automate loan and credit approval using ML models and financial metrics.",
-          technologies: ["Spring Boot", "Angular", "Python", "Machine Learning", "REST API"],
-          liveLink: null,
-          githubLink: "https://github.com/Parth-Parakhiya",
-          image: "/projects/crediwise.png"
-        },
-        {
-          title: "DataCascade – Distributed File Storage System",
-          description: "Built a fault-tolerant distributed storage system with file chunking, replication, and health monitoring using Django and MinIO.",
-          technologies: ["Django", "MinIO", "Docker", "Prometheus"],
-          liveLink: null,
-          githubLink: "https://github.com/Parth-Parakhiya",
-          image: "/projects/datacascade.png"
-        },
-        {
-          title: "WeTeachIT – Java Learning Portal",
-          description: "Interactive e-learning platform for students to learn Java with quizzes, code editor, and progress tracking.",
-          technologies: ["C#", "HTML", "CSS", "JavaScript", "MySQL"],
-          liveLink: null,
-          liveLink: "https://parth-portfolio.vercel.app",
-          githubLink: "https://github.com/Parth-Parakhiya",
-          image: "/projects/weteachit.png"
-        },
-        {
-          title: "Fitness & Health App",
-          description: "Android application that combines heart rate monitoring with music recommendations for guided fitness routines.",
-          technologies: ["Android", "Java", "SQLite"],
-          liveLink: null,
-          githubLink: "https://github.com/Parth-Parakhiya",
-          image: "/projects/fitnessapp.png"
-        },
-        {
-          title: "Developer Portfolio",
-          description: "My personal developer portfolio",
-          technologies: ["HTML", "Tailwind CSS", "JavaScript"],
-          liveLink: "https://parth-portfolio.vercel.app",
-          githubLink: "https://www.github.com/Parth-Parakhiya",
-          image: "/projects/portfolio.png"
-        }
+            title: "CrediWise – AI-Based Loan Eligibility System",
+            description: "AI-powered web platform developed for TD Bank to automate loan and credit approval using ML models and financial metrics.",
+            technologies: ["Spring Boot", "Angular", "Python", "Machine Learning", "REST API"],
+            liveLink: null,
+            githubLink: "https://github.com/Parth-Parakhiya/CrediWise",
+            image: "./assets/crediwise.png"
+          }
+          ,
+          {
+            title: "DataCascade – Distributed File Storage System",
+            description: "Built a fault-tolerant distributed storage system with file chunking, replication, and health monitoring using Django and MinIO.",
+            technologies: ["Django", "MinIO", "Docker", "Prometheus"],
+            liveLink: null,
+            githubLink: "https://github.com/Parth-Parakhiya/DataCascade",
+            image: "./assets/datacascade.png"
+          },
+          {
+            title: "DataCrafters – Automotive Intrusion Detection System",
+            description: "Real-time anomaly detection for CAN bus traffic using TensorFlow, Streamlit dashboards, and automated alerting.",
+            technologies: ["Python", "TensorFlow", "Streamlit", "ETL", "Vehicle CAN Bus"],
+            liveLink: null,
+            githubLink: "https://github.com/Parth-Parakhiya/DataCrafters",
+            image: "./assets/datacrafters.png"
+          },          
+          {
+            title: "WeTeachIT – Java Learning Portal",
+            description: "Interactive e-learning platform for students to learn Java with quizzes, code editor, and progress tracking.",
+            technologies: ["C#", "HTML", "CSS", "JavaScript", "MySQL"],
+            liveLink: "https://weteachit.github.io/",
+            githubLink: "https://github.com/Parth-Parakhiya/WeTeachIT",
+            image: "./assets/weteachit.png"
+          },
+          {
+            title: "Fitness & Health App",
+            description: "Android application that combines heart rate monitoring with music recommendations for guided fitness routines.",
+            technologies: ["Android", "Java", "SQLite"],
+            liveLink: null,
+            githubLink: "https://github.com/Parth-Parakhiya",
+            image: "./assets/fitnessapp.png"
+          },
+          {
+            title: "Developer Portfolio",
+            description: "My personal developer portfolio showcasing my projects, skills, and experience.",
+            technologies: ["HTML", "Tailwind CSS", "JavaScript"],
+            liveLink: "https://parth-parakhiya.github.io/parth-parakhiya-portfolio/",
+            githubLink: "https://github.com/Parth-Parakhiya/parth-parakhiya-portfolio",
+            image: "./assets/portfolio.png"
+          }          
       ],
     certifications: [
         {
