@@ -15604,7 +15604,7 @@ function I3() {
         children: [f.jsx("div", {
             className: "absolute inset-0 bg-gradient-to-r from-cyan-400 via-zinc-400 to-teal-400 rounded-lg"
         }), f.jsxs(Y.a, {
-            href: "C:/Users/parth/Documents/MyWebSites/Portfolio/assets/ParthParakhiya_Resume.pdf",
+            href: "./assets/ParthParakhiya_Resume.pdf",
             download: !0,
             className: "relative flex items-center gap-2 bg-zinc-800 font-semibold py-2 px-4 rounded-md transition-colors duration-200 m-1",
             whileHover: {
