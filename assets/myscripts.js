@@ -15830,7 +15830,7 @@ function $3() {
         children: f.jsx("img", {
             src: b.image,
             alt: "A photo of me",
-            className: "rounded-md w-full h-full"
+            className: "rounded-md w-full h-full object-cover"
         })
     })
 }
