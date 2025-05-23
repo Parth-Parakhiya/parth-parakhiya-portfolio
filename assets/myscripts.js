@@ -16093,7 +16093,7 @@ function t5() {
               ]
             })
           }), f.jsx("div", {
-            className: "absolute inset-0 z-0 grid grid-cols-6 gap-0 opacity-10 md:grid-cols-12",
+            className: "absolute inset-0 z-0 grid grid-cols-6 gap-0 opacity-10 md:grid-cols-6",
             children: Array.from({
                 length: 144
             }).map((i, o) => f.jsx(Y.div, {
