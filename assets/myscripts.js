@@ -14885,32 +14885,55 @@ const b = {
           }          
       ],
     certifications: [
-        {
-          title: "GitHub Foundations: Privacy, Security, Administration",
-          date: "2024",
-          description: "Completed LinkedIn Learning course covering GitHub privacy, access control, and admin fundamentals."
-        },
-        {
-          title: "Building Real-Time Web Apps with Spring Boot and WebSockets",
-          date: "2024",
-          description: "Hands-on training on building real-time applications using Spring Boot and WebSockets via LinkedIn Learning."
-        },
-        {
-          title: "Learning Hadoop",
-          date: "2024",
-          description: "Coursework covering Hadoop architecture, HDFS, and big data processing fundamentals."
-        },
-        {
-          title: "Advanced Agile Mindset",
-          date: "2024",
-          description: "Certification focused on Agile principles and applying Agile mindset in dynamic development environments."
-        },
-        {
-          title: "JAVA, C, and C++ Programming",
-          date: "2023",
-          description: "Certification from Raj Academy covering foundational and intermediate programming in Java, C, and C++."
-        }
-      ]      
+    {
+        title: "GitHub Foundations: Privacy, Security, Administration",
+        date: "2024",
+        description: "Completed LinkedIn Learning course covering GitHub privacy, access control, and admin fundamentals.",
+        link: "https://www.linkedin.com/learning/certificates/5e77d527d3a76e3c03a0307f92c25d9f5ac7392b5e8f1a31b734dcd9f8ef0f2d"
+    },
+    {
+        title: "Building Real-Time Web Apps with Spring Boot and WebSockets",
+        date: "2024",
+        description: "Hands-on training on building real-time applications using Spring Boot and WebSockets via LinkedIn Learning.",
+        link: "https://www.linkedin.com/learning/certificates/5a04d78cf96a87176d1c8b7a1d6d66cf0adad9f67aab9ed9cbe1d11900fa732f"
+    },
+    {
+        title: "Learning Hadoop",
+        date: "2024",
+        description: "Coursework covering Hadoop architecture, HDFS, and big data processing fundamentals.",
+        link: "https://www.linkedin.com/learning/certificates/50c42a1508a0fadd2788cf3896958a3a888d6f4133af3751e7863e324210125d"
+    },
+    {
+        title: "Advanced Agile Mindset",
+        date: "2024",
+        description: "Certification focused on Agile principles and applying Agile mindset in dynamic development environments.",
+        link: "https://www.linkedin.com/learning/certificates/27130ebbc96df2175a7f5c116e7e11a8816ea5e6d899e4ba971f014c8cf15baa"
+    },
+    {
+        title: "JAVA, C, and C++ Programming",
+        date: "2023",
+        description: "Certification from Raj Academy covering foundational and intermediate programming in Java, C, and C++.",
+        link: "https://drive.google.com/file/d/1g7Gp4o5zNfJavaCCertificate/view"
+    },
+    {
+        title: "Jaguar Land Rover Endorsement Letter",
+        date: "2025",
+        description: "Endorsement received from Jaguar Land Rover recognizing project contributions on AI Benchmarking and KPI Prediction.",
+        link: "https://drive.google.com/file/d/1hJLR_Endorsement_Letter/view"
+    },
+    {
+        title: "NeoDocto Internship Certificate",
+        date: "2022",
+        description: "Certificate of Internship as Associate Web Developer at NeoDocto.",
+        link: "https://drive.google.com/file/d/1hNeoDoctoInternshipCert/view"
+    },
+    {
+        title: "Published Research: Fitness Application with Music Player and Heart Rate Measurement",
+        date: "2021",
+        description: "Publication in IJRASET Journal showcasing integration of health monitoring with multimedia application.",
+        link: "https://www.ijraset.com/print-certificate/fitness-application-with-music-player-and-heart-rate-measurement"
+    }
+    ]    
 };
 
 function C3(e) {
