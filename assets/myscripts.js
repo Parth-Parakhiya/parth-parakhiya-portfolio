@@ -16437,7 +16437,7 @@ function t5() {
             className: "text-xs",
             children: f.jsxs("p", {
               children: [
-                "Made by ",
+                "Designed & built by ",
                 f.jsx("span", {
                   className: "italic text-teal-200",
                   children: "Parth Parakhiya"
