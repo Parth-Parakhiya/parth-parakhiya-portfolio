@@ -1,3 +1,15 @@
+// Make sure the site renders with the real device width (not a forced desktop width)
+(function ensureViewport() {
+  const wanted = "width=device-width, initial-scale=1, viewport-fit=cover";
+  let m = document.querySelector('meta[name="viewport"]');
+  if (!m) {
+    m = document.createElement("meta");
+    m.name = "viewport";
+    document.head.appendChild(m);
+  }
+  m.setAttribute("content", wanted);
+})();
+
 (function() {
     const t = document.createElement("link").relList;
     if (t && t.supports && t.supports("modulepreload")) return;
@@ -14722,7 +14734,7 @@ function k3(e) {
 const b = {
     name: "Parth Parakhiya",
     alias: "Parth",
-    title: "Computer Science Engineer",
+    title: "Data Analyst & Full-Stack Developer",
     image: "./assets/personal.jpeg",
     skills: [{
         name: ".Net",
@@ -14787,26 +14799,41 @@ const b = {
     },
     experience: {
         work: [{
+            title: "Data Analytics Intern – AI Benchmarking & Performance Prediction",
+            company: "Jaguar Land Rover (JLR) · University of Windsor",
+            location: "Windsor, ON (Remote)",
+            dateRange: "May 2025 – Aug 2025",
+            description:
+                "Led a 3-member team on a JLR-sponsored project to build a centralized AI benchmark database (2,108 GPU records), engineer 46+ derived features, and correct vendor/architecture bias (−12.37%). Trained XGBoost and RandomForest models for KPI prediction (~91% accuracy) and shipped an interactive Streamlit dashboard on Ploomber Cloud. Delivered production-ready docs (user manual, SDD, test plan) and a 60-page final report.",
+            skills: [
+                "Python", "Pandas", "scikit-learn", "XGBoost", "RandomForest",
+               "Streamlit", "PostgreSQL", "SQL", "ETL", "Data Engineering",
+               "Git", "Ploomber Cloud"
+                    ]
+          }, {
             title: "Operational Head / Web Solutions Lead",
             company: "SnapGrab Inc.",
-            location: "Mumbai, India",
+            location: "Mumbai, India (Hybrid)",
             dateRange: "May 2023 – May 2024",
-            description: "Led backend development of an event and logistics system, refactored legacy software using .NET and C#, implemented microservices architecture, and coordinated Agile sprints with a 12-member team. Oversaw CI/CD pipelines and Docker-based deployments via Azure DevOps.",
-            skills: ["C#", ".NET", "SQL", "Docker", "Azure DevOps", "Scrum"]
+            description:
+                "Directed a 12-member team delivering cloud-native apps with Node.js/Django/MySQL. Designed ETL pipelines, analyzed ops logs for reliability, and built real-time KPI dashboards that cut manual processes by ~40%. Drove reporting with Excel macros and Power BI.",
+            skills: ["Node.js","Django","MySQL","ETL","Dashboards","Power BI","Agile"]
           }, {
             title: "Research Lead / Developer",
             company: "Universal College of Engineering",
-            location: "Mumbai, India",
+            location: "Thane, India (On-Site)",
             dateRange: "Aug 2022 – Apr 2023",
-            description: "Led the research and development of an Android-based fitness application integrating biometric sensors and music playback logic. Published findings in IJRASET Journal and managed a 4-member team to enhance user engagement through real-time feedback loops.",
-            skills: ["Android", "Java", "Biometric Sensors", "Agile", "Research Publication", "UI/UX"]
+            description:
+                "Led R&D on an Android fitness app integrating biometric sensors + Bluetooth APIs and music-player automation; published results in IJRASET and managed a 4-member team.",
+            skills: ["Android","Java","Bluetooth APIs","Biometric Sensors","Agile","Research"]
           }, {
             title: "Associate Web Developer Intern",
             company: "NeoDocto Inc.",
-            location: "Remote (Headquartered in NYC, USA)",
+            location: "Bangalore, India (Remote)",
             dateRange: "Sep 2021 – Mar 2022",
-            description: "Collaborated on frontend enhancements and backend integrations for a global healthcare platform. Focused on responsive UI/UX improvements, automated data scraping scripts, and performance optimizations using C#, HTML, CSS, and Python.",
-            skills: ["C#", "HTML", "CSS", "JavaScript", "Python", "Web Scraping"]
+            description:
+                "Built responsive React components; developed RESTful .NET APIs with MySQL; automated ETL workflows and data analysis to ship actionable dashboards.",
+            skills: ["React",".NET","MySQL","ETL","Dashboards","Accessibility"]
           }],
           freelance: [{
             project: "LocalCart Inventory Dashboard",
@@ -14879,61 +14906,164 @@ const b = {
             title: "Developer Portfolio",
             description: "My personal developer portfolio showcasing my projects, skills, and experience.",
             technologies: ["HTML", "Tailwind CSS", "JavaScript"],
-            liveLink: "https://parth-parakhiya.github.io/parth-parakhiya-portfolio/",
+            liveLink: "https://parth-parakhiya-portfolio.vercel.app/",
             githubLink: "https://github.com/Parth-Parakhiya/parth-parakhiya-portfolio",
             image: "./assets/portfolio.png"
           }          
       ],
     certifications: [
-    {
-        title: "GitHub Foundations: Privacy, Security, Administration",
-        date: "2024",
-        description: "Completed LinkedIn Learning course covering GitHub privacy, access control, and admin fundamentals.",
-        link: "https://www.linkedin.com/learning/certificates/5e77d527d3a76e3c03a0307f92c25d9f5ac7392b5e8f1a31b734dcd9f8ef0f2d"
-    },
-    {
-        title: "Building Real-Time Web Apps with Spring Boot and WebSockets",
-        date: "2024",
-        description: "Hands-on training on building real-time applications using Spring Boot and WebSockets via LinkedIn Learning.",
-        link: "https://www.linkedin.com/learning/certificates/5a04d78cf96a87176d1c8b7a1d6d66cf0adad9f67aab9ed9cbe1d11900fa732f"
-    },
-    {
-        title: "Learning Hadoop",
-        date: "2024",
-        description: "Coursework covering Hadoop architecture, HDFS, and big data processing fundamentals.",
-        link: "https://www.linkedin.com/learning/certificates/50c42a1508a0fadd2788cf3896958a3a888d6f4133af3751e7863e324210125d"
-    },
-    {
-        title: "Advanced Agile Mindset",
-        date: "2024",
-        description: "Certification focused on Agile principles and applying Agile mindset in dynamic development environments.",
-        link: "https://www.linkedin.com/learning/certificates/27130ebbc96df2175a7f5c116e7e11a8816ea5e6d899e4ba971f014c8cf15baa"
-    },
-    {
-        title: "JAVA, C, and C++ Programming",
-        date: "2023",
-        description: "Certification from Raj Academy covering foundational and intermediate programming in Java, C, and C++.",
-        link: "https://drive.google.com/file/d/1g7Gp4o5zNfJavaCCertificate/view"
-    },
-    {
-        title: "Jaguar Land Rover Endorsement Letter",
-        date: "2025",
-        description: "Endorsement received from Jaguar Land Rover recognizing project contributions on AI Benchmarking and KPI Prediction.",
-        link: "https://drive.google.com/file/d/1hJLR_Endorsement_Letter/view"
-    },
-    {
-        title: "NeoDocto Internship Certificate",
-        date: "2022",
-        description: "Certificate of Internship as Associate Web Developer at NeoDocto.",
-        link: "https://drive.google.com/file/d/1hNeoDoctoInternshipCert/view"
-    },
-    {
-        title: "Published Research: Fitness Application with Music Player and Heart Rate Measurement",
-        date: "2021",
-        description: "Publication in IJRASET Journal showcasing integration of health monitoring with multimedia application.",
-        link: "https://www.ijraset.com/print-certificate/fitness-application-with-music-player-and-heart-rate-measurement"
-    }
-    ]    
+        {
+            title: "Jaguar Land Rover Endorsement Letter",
+            date: "2025",
+            description:"Endorsement received from Jaguar Land Rover recognizing project contributions on AI Benchmarking and KPI Prediction.",
+            url: "https://drive.google.com/file/d/1EawOoFdvGqgP1EkOvpeWoX1p7SvRo6Xq/view?usp=drive_link"
+        },
+
+        {
+            title: "GitHub Foundations: Privacy, Security, Administration",
+            date: "2024",
+            description:"Completed LinkedIn Learning course covering GitHub privacy, access control, and admin fundamentals.",
+            url: "https://drive.google.com/file/d/1Dkzs3jTtToa0bFJm-91oy0knK6OMbaMq/view?usp=drive_link"
+        },
+        {
+            title: "Advanced Agile Mindset",
+            date: "2024",
+            description:"Certification focused on Agile principles and applying Agile mindset in dynamic development environments.",
+            url: "https://drive.google.com/file/d/1m7noCgyy_pAmZ2zgsaos9vk48q83AOEG/view?usp=drive_link"
+        },
+        {
+            title: "Learning Hadoop",
+            date: "2024",
+            description: "Coursework covering Hadoop architecture, HDFS, and big data processing fundamentals.",
+            url: "https://drive.google.com/file/d/1whrX-GEwcGYnVBJK-yhACNjcETprDbIX/view?usp=drive_link"
+        },
+        {
+            title: "Building Real-Time Web Apps with Spring Boot and WebSockets",
+            date: "2024",
+            description: "Hands-on training on building real-time applications using Spring Boot and WebSockets via LinkedIn Learning.",
+            url: "https://drive.google.com/file/d/1eyFHKRq19tvLDbiSMkWg8Xf-oipUgWlS/view?usp=drive_link"
+        },
+
+        {
+            title: "C & C++ Programming",
+            date: "2020",
+            description: "Certification from Raj Academy covering foundational and intermediate programming in C and C++.",
+            url: "https://drive.google.com/file/d/1ZXUfpXuqYgyY8-pfF1i085YWTz8oJ0fG/view?usp=drive_link" 
+        },
+
+        {
+            title: "Core & Advance JAVA Programming",
+            date: "2020",
+            description: "Certification from Raj Academy covering foundational and intermediate programming in Core and Advance.",
+            url: "https://drive.google.com/file/d/122320CgrzV410Ee4PLIgQuOp0jRCRgOm/view?usp=drive_link" 
+        },
+
+        {
+            title: "NeoDocto Internship Certificate",
+            date: "2022",
+            description: "Certificate of Internship as Associate Web Developer at NeoDocto.",
+            url: "https://drive.google.com/file/d/1i8E4okzKVVEOpAaXzP52bDPEzvroBOIJ/view?usp=drive_link"
+        },
+
+        {
+            title:
+            "Published Research: Fitness Application with Music Player and Heart Rate Measurement",
+            date: "2023",
+            description: "Publication in IJRASET Journal showcasing integration of health monitoring with multimedia application.",
+            url: "https://www.ijraset.com/print-certificate/fitness-application-with-music-player-and-heart-rate-measurement"
+        },
+
+        {
+            title: "Selenium Essential Training",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Selenium Essential Training.",
+            url: "https://drive.google.com/file/d/1r8Yqp1e4EHhrOSfpRdWft6LQe16G6hrg/view?usp=drive_link"
+        },
+
+        {
+            title: "Oracle Java Certification: 1. Data Types",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Oracle Java Certification: 1. Data Types.",
+            url: "https://drive.google.com/file/d/19QaFprYKo6-0qIZCbdzvKtI8W0qH68Ho/view?usp=drive_link"
+        },
+
+        {
+            title: "Software Architecture Foundations",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Software Architecture Foundations.",
+            url: "https://drive.google.com/file/d/11iLDzL4hvLiKo3MmMYVZDEmicxu2LTWq/view?usp=drive_link"
+        },
+
+        {
+            title: "Agile Project Management with Jira Cloud: 1 Projects, Boards, and Issues",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Agile Project Management with Jira Cloud — Projects, Boards, and Issues.",
+            url: "https://drive.google.com/file/d/1zl9TlTqsftyGmt8GP_97awLTX3KgNUtC/view?usp=drive_link"
+        },
+
+        {
+            title: "Spring: Test-Driven Development with JUnit",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Spring — Test-Driven Development with JUnit.",
+            url: "https://drive.google.com/file/d/1xhY6peO-hyXWxA5inQR9E14bIS6OcJi6/view?usp=drive_link"
+        },
+
+        {
+            title: "Learning Bash Scripting (2022)",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Learning Bash Scripting.",
+            url: "https://drive.google.com/file/d/1YWP9FOD1SvkAPPNXYjh7zRJxCbDJ30FV/view?usp=drive_link"
+        },
+
+        {
+            title: "Agile Project Management with Jira Cloud: 2 Lean and Agile Processes",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Agile Project Management with Jira Cloud — Lean and Agile Processes.",
+            url: "https://drive.google.com/file/d/189JZooHEeyB_pNRSpdEjYroYYTdxcNyz/view?usp=drive_link"
+        },
+
+        {
+            title: "Agile Project Management with Jira Cloud: 3 Advanced Topics",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Agile Project Management with Jira Cloud — Advanced Topics.",
+            url: "https://drive.google.com/file/d/18KLX0eVMffAEh1Jhi_9ArJgt_-6wBn1g/view?usp=drive_link"
+        },
+
+        {
+            title: "Relational Databases Essential Training",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Relational Databases Essential Training.",
+            url: "https://drive.google.com/file/d/1eYAkvHEY9He9H4KHkxsF-M_6MlSlPpYq/view?usp=drive_link"
+        },
+
+        {
+            title: "Introduction to Spark SQL and DataFrames",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Introduction to Spark SQL and DataFrames.",
+            url: "https://drive.google.com/file/d/1C8vm23f8k-Zf2YJ4dUPEa3Y7_dQbsQk4/view?usp=drive_link"
+        },
+
+        {
+            title: "Unix Essential Training",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Unix Essential Training.",
+            url: "https://drive.google.com/file/d/1Re82u3YOnnx9-nLlt0SVPvW-6Cl83WKN/view?usp=drive_link"
+        },
+
+        {
+            title: "Software Architecture: From Developer to Architect",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Software Architecture — From Developer to Architect.",
+            url: "https://drive.google.com/file/d/1UYE9_6CoOIB03LTBRbDp0xfgd0yuHUCR/view?usp=drive_link"
+        },
+
+        {
+            title: "Product Management Tips",
+            date: "2024",
+            description: "LinkedIn Learning certificate: Product Management Tips.",
+            url: "https://drive.google.com/file/d/1HL0rkWSH3WtFn3pbHieYyVLiCKVYC19r/view?usp=drive_link"
+        }
+    ]   
 };
 
 function C3(e) {
@@ -15370,6 +15500,7 @@ function z3(e) {
         }]
     })(e)
 }
+
 const A3 = ({
         degree: e,
         institution: t,
@@ -15431,31 +15562,55 @@ const A3 = ({
         date: t,
         description: n,
         credentialId: r,
-        url: i
+        url: i,
+        pinned: p
     }) => f.jsxs("div", {
-        className: "bg-zinc-800/50 rounded-lg p-6 mb-6",
+        className: "bg-zinc-800/50 rounded-lg p-5 mb-4",
         children: [f.jsxs("div", {
             className: "flex justify-between items-start mb-2",
             children: [f.jsxs("div", {
-                children: [f.jsx("h3", {
-                    className: "text-xl font-semibold text-zinc-100",
-                    children: e
-                }), r && f.jsx("p", {
-                    className: "text-zinc-300",
-                    children: r
-                })]
+                children: [i
+                ? f.jsxs("a", {
+                    href: i,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                    className:
+                        "text-xl font-semibold text-zinc-100 inline-flex items-center gap-2 " +
+                        "hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-500/40 rounded",
+                    children: [
+                        // 📌 EMOJI PIN (subtle)
+                        p && f.jsx("span", {
+                        title: "Pinned",
+                        className: "inline-block text-amber-300/90 text-sm translate-y-[1px]",
+                        children: "📌  "
+                        }),
+                        e,
+                        f.jsx(z3, { className: "w-4 h-4 opacity-70" })
+                    ]
+                    })
+                : f.jsxs("h3", {
+                    className: "text-xl font-semibold text-zinc-100 inline-flex items-center gap-2",
+                    children: [
+                        p && f.jsx("span", {
+                        title: "Pinned",
+                        className: "inline-block text-amber-300/90 text-sm translate-y-[1px]",
+                        children: "📌  "
+                        }),
+                        e
+                    ]
+                    }), ]
             }), f.jsx("span", {
                 className: "bg-zinc-700 text-zinc-300 px-2 py-1 rounded text-sm",
                 children: t
             })]
         }), f.jsx("p", {
-            className: "text-zinc-300 mb-4",
+            className: "text-zinc-300 mb-3",
             children: n
         }), i && f.jsxs("a", {
             href: i,
             target: "_blank",
             rel: "noopener noreferrer",
-            className: "text-zinc-300 hover:text-zinc-100 flex gap-2",
+            className: "text-zinc-300 hover:text-zinc-100 flex gap-2 md:hidden",
             children: ["View Credential", f.jsx(z3, {})]
         })]
     });
@@ -15486,9 +15641,147 @@ function R3() {
             })]
         }), f.jsx("div", {
             className: "space-y-8",
-            children: b.certifications.map((e, t) => f.jsx(L3, {
-                ...e
-            }, t))
+            children: (() => {
+            // 1) choose which certs are always on top (exact title matches)
+            const PINNED_TITLES = [
+            "Jaguar Land Rover Endorsement Letter",
+            "NeoDocto Internship Certificate",
+            "Published Research: Fitness Application with Music Player and Heart Rate Measurement",
+            "Core & Advance JAVA Programming",
+            "C & C++ Programming",
+            ];
+
+            // secondary tie-breaker: by title A→Z when years are equal
+            const cmpCert = (a, b) => {
+            const ya = Number(a.date) || 0;
+            const yb = Number(b.date) || 0;
+            if (yb !== ya) return yb - ya;                  // newer year first
+            return a.title.localeCompare(b.title, undefined, {sensitivity: "base"});
+            };
+
+            // 2) newest → oldest for the full list
+            const allSorted = [...b.certifications].sort(cmpCert);
+
+            /// 3) pinned (sorted newest → oldest because we filter from allSorted)
+            const pinned = allSorted.filter(c => PINNED_TITLES.includes(c.title));
+
+            // 4) the rest (everything not pinned), still sorted by year desc
+            const rest = allSorted.filter(c => !PINNED_TITLES.includes(c.title));
+
+            // 5) render
+            return f.jsxs(f.Fragment, {
+            children: [
+                // pinned first (tighter vertical rhythm)
+                f.jsx("div", {
+                className: "space-y-6",               // was no wrapper
+                children: pinned.map((c, i) =>
+                    f.jsx(L3, { ...c, pinned: !0 }, `cert-pinned-${i}`) // pass pinned flag (see step 2)
+                )
+                }),
+
+                // subtle divider before "the rest"
+                rest.length > 0 && f.jsx("div", {
+                className: "my-4 border-t border-zinc-700/50"
+                }),
+
+                // collapsible remainder (matches your UI + animations)
+                rest.length > 0 && f.jsxs("details", {
+                className: "mt-4",
+                onToggle: (ev) => {
+                    const d = ev.currentTarget;
+                    const lbl = d.querySelector('[data-cert-label]');
+                    if (lbl) lbl.textContent = d.open ? "Show less" : `Show ${rest.length} more`;
+                    const body = d.querySelector('[data-cert-body]');
+                    if (body) {
+                    body.style.opacity = d.open ? "1" : "0";
+                    body.style.transform = d.open ? "translateY(0)" : "translateY(4px)";
+                    }
+                },
+                children: [
+                    // toggle row
+                    f.jsx("summary", {
+                    className:
+                        "inline-flex items-center gap-2 cursor-pointer list-none " +
+                        "text-indigo-300 hover:text-indigo-200 transition-colors " +
+                        "focus:outline-none focus:ring-2 focus:ring-indigo-500/40 rounded",
+                    children: f.jsx("span", {
+                        "data-cert-label": true,
+                        className: "underline underline-offset-2",
+                        children: `Show ${rest.length} more`
+                    })
+                    }),
+
+                    // reveal area
+                    f.jsx("div", {
+                    "data-cert-body": true,
+                    className: "mt-4 space-y-5",
+                    style: {
+                        opacity: 0,
+                        transform: "translateY(4px)",
+                        transition: "opacity 300ms ease, transform 300ms ease"
+                    },
+                    children: rest.map((c, i) => f.jsx(L3, { ...c }, `cert-rest-${i}`))
+                    })
+                ]
+                })
+            ]
+            });
+
+            const MAX_FEATURED_CERTS = 8;            // show this many up-front
+            const _featured = _items.slice(0, MAX_FEATURED_CERTS);
+            const _rest     = _items.slice(MAX_FEATURED_CERTS);
+
+            return f.jsxs(f.Fragment, {
+                children: [
+                // featured items
+                ..._featured.map((c, i) => f.jsx(L3, { ...c }, `cert-top-${i}`)),
+
+                // collapsible remainder
+                _rest.length > 0 &&
+                    f.jsxs("details", {
+                    className: "mt-4",            // spacing to match your modal rhythm
+                    onToggle: (ev) => {
+                        const d = ev.currentTarget;
+                        // 1) flip label text
+                        const lbl = d.querySelector('[data-cert-label]');
+                        if (lbl) lbl.textContent = d.open ? "Show less" : `Show ${_rest.length} more`;
+                        // 2) animate the body
+                        const body = d.querySelector('[data-cert-body]');
+                        if (body) {
+                        body.style.opacity = d.open ? "1" : "0";
+                        body.style.transform = d.open ? "translateY(0)" : "translateY(4px)";
+                        }
+                    },
+                    children: [
+                        // SUMMARY = toggle row (uses the browser’s single marker, no custom caret)
+                        f.jsx("summary", {
+                        className:
+                            "inline-flex items-center gap-2 cursor-pointer list-none " +
+                            "text-indigo-300 hover:text-indigo-200 transition-colors " +
+                            "focus:outline-none focus:ring-2 focus:ring-indigo-500/40 rounded",
+                        children: f.jsx("span", {
+                            "data-cert-label": !0,                  // we update this text onToggle
+                            className: "underline underline-offset-2",
+                            children: `Show ${_rest.length} more`,
+                        }),
+                        }),
+
+                        // BODY = revealed items (fade & slide-in, JS-driven)
+                        f.jsx("div", {
+                        "data-cert-body": !0,
+                        className: "mt-4 space-y-5",
+                        style: {
+                            opacity: 0,
+                            transform: "translateY(4px)",
+                            transition: "opacity 300ms ease, transform 300ms ease",
+                        },
+                        children: _rest.map((c, i) => f.jsx(L3, { ...c }, `cert-rest-${i}`)),
+                        }),
+                    ],
+                    })
+                ]
+            });
+            })()
         }), f.jsx("div", {
             className: "bg-zinc-800/50 p-4 rounded-lg",
             children: f.jsx("p", {
@@ -15515,6 +15808,22 @@ function V3(e) {
         }]
     })(e)
 }
+
+const PROJ_RATIO = 16 / 9;
+
+function resizeProjectMedia() {
+  const boxes = document.querySelectorAll('.proj-media');
+  boxes.forEach(box => {
+    const w = box.clientWidth;
+    if (w > 0) box.style.height = `${Math.round(w / PROJ_RATIO)}px`;
+  });
+}
+
+window.addEventListener('resize', () => requestAnimationFrame(resizeProjectMedia));
+
+requestAnimationFrame(resizeProjectMedia);
+
+
 const D3 = ({
     title: e,
     description: t,
@@ -15524,46 +15833,66 @@ const D3 = ({
     image: o
 }) => f.jsxs("div", {
     className: "bg-zinc-800/50 rounded-lg overflow-hidden",
-    children: [f.jsx("img", {
+    children: [
+        f.jsx("div", {
+      className: "proj-media w-full overflow-hidden rounded-xl bg-zinc-900/40",
+      children: f.jsx("img", {
         src: o,
         alt: e,
-        className: "w-full h-48 object-cover"
-    }), f.jsxs("div", {
-        className: "p-6",
-        children: [f.jsx("h3", {
-            className: "text-xl font-semibold text-zinc-100 mb-2",
-            children: e
-        }), f.jsx("p", {
-            className: "text-zinc-300 mb-4",
-            children: t
-        }), f.jsx("div", {
-            className: "flex flex-wrap gap-2 mb-4",
-            children: n.map((s, l) => f.jsx("span", {
-                className: "text-zinc-300 bg-zinc-700/50 rounded px-2 py-1 text-sm",
-                children: s
-            }, l))
-        }), f.jsxs("div", {
-            className: "flex gap-4",
-            children: [r && f.jsxs("a", {
-                href: r,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                className: "flex items-center text-zinc-300 hover:text-zinc-100",
-                children: [f.jsx(h4, {
-                    className: "w-4 h-4 mr-1"
-                }), "Live Demo"]
-            }), i && f.jsxs("a", {
-                href: i,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                className: "flex items-center text-zinc-300 hover:text-zinc-100",
-                children: [f.jsx(Zm, {
-                    className: "w-4 h-4 mr-1"
-                }), "GitHub"]
-            })]
-        })]
-    })]
+        loading: "lazy",
+        decoding: "async",
+        className: "w-full h-full object-contain",
+        onLoad: resizeProjectMedia   
+      })
+    }),
+        f.jsxs("div", {
+            className: "p-6",
+            children: [
+                f.jsx("h3", {
+                    className: "text-xl font-semibold text-zinc-100 mb-2",
+                    children: e
+                }),
+                f.jsx("p", {
+                    className: "text-zinc-300 mb-4",
+                    children: t
+                }),
+                f.jsx("div", {
+                    className: "flex flex-wrap gap-2 mb-4",
+                    children: n.map((s, l) => f.jsx("span", {
+                        className: "text-zinc-300 bg-zinc-700/50 rounded px-2 py-1 text-sm",
+                        children: s
+                    }, l))
+                }),
+                f.jsxs("div", {
+                    className: "flex gap-4",
+                    children: [
+                        r && f.jsxs("a", {
+                            href: r,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            className: "flex items-center text-zinc-300 hover:text-zinc-100",
+                            children: [
+                                f.jsx(h4, { className: "w-4 h-4 mr-1" }),
+                                "Live Demo"
+                            ]
+                        }),
+                        i && f.jsxs("a", {
+                            href: i,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            className: "flex items-center text-zinc-300 hover:text-zinc-100",
+                            children: [
+                                f.jsx(Zm, { className: "w-4 h-4 mr-1" }),
+                                "GitHub"
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
+    ]
 });
+
 
 function _3() {
     return f.jsxs("div", {
@@ -15643,12 +15972,11 @@ function I3() {
             className: "absolute inset-0 bg-gradient-to-r from-cyan-400 via-zinc-400 to-teal-400 rounded-lg"
         }), f.jsxs(Y.a, {
             href: "./assets/ParthParakhiya_Resume.pdf",
-            download: !0,
-            className: "relative flex items-center gap-2 bg-zinc-800 font-semibold py-2 px-4 rounded-md transition-colors duration-200 m-1",
-            whileHover: {
-                boxShadow: "0px 0px 12px rgb(255,255,255)"
-            },
-            children: [f.jsx(Y.span, {
+              target: "_blank",
+                rel: "noopener noreferrer",
+                className: "relative flex items-center gap-2 bg-zinc-800 font-semibold py-2 px-4 rounded-md transition-colors duration-200 m-1",
+                whileHover: { boxShadow: "0px 0px 12px rgb(255,255,255)" },
+                children: [f.jsx(Y.span, {
                 animate: {
                     y: [0, -2, 1, 0]
                 },
@@ -15691,7 +16019,8 @@ function l0({
             })
         }
     }, []);
-    const o = "relative col-span-3 row-span-5 flex flex-col items-center justify-around p-4 h-full" + (t ? "hidden" : "");
+    
+    const o = "relative col-span-3 row-span-5 flex flex-col items-center justify-around p-4 h-full" + (t ? " hidden md:flex" : "");
     return f.jsxs(Ke, {
         onMouseLeave: () => {
             if (!n.current) return;
@@ -15775,6 +16104,8 @@ const Tn = E.forwardRef(function({
     })
 });
 
+const isSmall = typeof window !== "undefined" && window.innerWidth < 1024;
+
 function F3({
     setTab: e,
     setIsMenuOpen: t,
@@ -15800,7 +16131,7 @@ function F3({
             setTab: e
         }), f.jsx($3, {}), f.jsx(l0, {
             setTab: e,
-            hideOnSmall: !1
+            hideOnSmall: isSmall
         }), f.jsx(Z3, {}), f.jsx(Q3, {}), f.jsx(Y3, {
             onClick: () => {
                 i(o => o + 1)
@@ -16084,10 +16415,10 @@ function e5({
             },
             className: "fixed w-[90%] right-0 top-0 bottom-0 bg-zinc-800 shadow-xl z-30",
             children: f.jsx("nav", {
-                className: "grid h-full grid-cols-3 grid-rows-5",
+                className: "grid h-full grid-cols-1 grid-rows-6 md:grid-cols-3 md:grid-rows-5",
                 children: f.jsx(l0, {
                     setTab: n,
-                    hideOnSmall: !0
+                    hideOnSmall: !1
                 })
             })
         })]
